@@ -1,0 +1,23 @@
+HTTP/2 200 
+content-type: text/html; charset=UTF-8
+x-dns-prefetch-control: on
+permissions-policy: private-state-token-redemption=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com"), private-state-token-issuance=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com")
+no-vary-search: params=("PageSpeed")
+link: <https://popkaraoke32.com/wp-json/>; rel="https://api.w.org/"
+link: <https://popkaraoke32.com/wp-json/wp/v2/pages/15>; rel="alternate"; title="JSON"; type="application/json"
+link: <https://popkaraoke32.com/>; rel=shortlink
+x-litespeed-cache-control: public,max-age=604800
+x-litespeed-tag: 941_front,941_URL.6666cd76f96956469e7be39d750cc7d9,941_F,941_Po.15,941_PGS,941_guest,941_
+etag: "58747-1781205491;;;"
+vary: Accept-Encoding,User-Agent
+x-xss-protection: 1; mode=block
+x-frame-options: SAMEORIGIN
+x-content-type-options: nosniff
+referrer-policy: strict-origin-when-cross-origin
+cache-control: max-age=60, private, proxy-revalidate
+x-qc-cache: hit
+date: Fri, 12 Jun 2026 08:28:03 GMT
+server: LiteSpeed
+x-qc-pop: NA-US-IAD-89
+alt-svc: h3=":443"; ma=2592000, h3-29=":443"; ma=2592000
+
