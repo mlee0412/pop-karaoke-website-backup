@@ -1,0 +1,14 @@
+{
+  "redirects": [
+    { "source": "/reserve", "destination": "/#reserve", "permanent": false },
+    { "source": "/reserve/", "destination": "/#reserve", "permanent": false },
+    { "source": "/reservations", "destination": "/#reserve", "permanent": false },
+    { "source": "/reservations/", "destination": "/#reserve", "permanent": false },
+    { "source": "/contact", "destination": "/#reserve", "permanent": false },
+    { "source": "/contact/", "destination": "/#reserve", "permanent": false },
+    { "source": "/menu", "destination": "/#details", "permanent": false },
+    { "source": "/menu/", "destination": "/#details", "permanent": false },
+    { "source": "/pricing", "destination": "/#details", "permanent": false },
+    { "source": "/pricing/", "destination": "/#details", "permanent": false }
+  ]
+}
