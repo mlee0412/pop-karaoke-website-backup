@@ -1,38 +1,174 @@
 {
   "redirects": [
-    { "source": "/reserve", "destination": "/#reserve", "permanent": false },
-    { "source": "/reserve/", "destination": "/#reserve", "permanent": false },
-    { "source": "/reservations", "destination": "/#reserve", "permanent": false },
-    { "source": "/reservations/", "destination": "/#reserve", "permanent": false },
-    { "source": "/booknow", "destination": "/#reserve", "permanent": false },
-    { "source": "/booknow/", "destination": "/#reserve", "permanent": false },
-    { "source": "/contact", "destination": "/#reserve", "permanent": false },
-    { "source": "/contact/", "destination": "/#reserve", "permanent": false },
-    { "source": "/menu", "destination": "/#details", "permanent": false },
-    { "source": "/menu/", "destination": "/#details", "permanent": false },
-    { "source": "/pricing", "destination": "/#details", "permanent": false },
-    { "source": "/pricing/", "destination": "/#details", "permanent": false },
-    { "source": "/about", "destination": "/#experience", "permanent": false },
-    { "source": "/about/", "destination": "/#experience", "permanent": false },
-    { "source": "/faq", "destination": "/#faq", "permanent": false },
-    { "source": "/faq/", "destination": "/#faq", "permanent": false },
-    { "source": "/terms-of-use", "destination": "/", "permanent": false },
-    { "source": "/terms-of-use/", "destination": "/", "permanent": false },
-    { "source": "/privacy-policy", "destination": "/", "permanent": false },
-    { "source": "/privacy-policy/", "destination": "/", "permanent": false },
-    { "source": "/.wp-toolkit_o", "destination": "/", "permanent": false },
-    { "source": "/.wp-toolkit_o/", "destination": "/", "permanent": false },
-    { "source": "/.wp-toolkit_o/reserve", "destination": "/#reserve", "permanent": false },
-    { "source": "/.wp-toolkit_o/reserve/", "destination": "/#reserve", "permanent": false },
-    { "source": "/.wp-toolkit_o/reservations", "destination": "/#reserve", "permanent": false },
-    { "source": "/.wp-toolkit_o/reservations/", "destination": "/#reserve", "permanent": false },
-    { "source": "/.wp-toolkit_o/contact", "destination": "/#reserve", "permanent": false },
-    { "source": "/.wp-toolkit_o/contact/", "destination": "/#reserve", "permanent": false },
-    { "source": "/.wp-toolkit_o/menu", "destination": "/#details", "permanent": false },
-    { "source": "/.wp-toolkit_o/menu/", "destination": "/#details", "permanent": false },
-    { "source": "/.wp-toolkit_o/pricing", "destination": "/#details", "permanent": false },
-    { "source": "/.wp-toolkit_o/pricing/", "destination": "/#details", "permanent": false },
-    { "source": "/.wp-toolkit_o/terms-of-use", "destination": "/", "permanent": false },
-    { "source": "/.wp-toolkit_o/terms-of-use/", "destination": "/", "permanent": false }
+    {
+      "source": "/reserve",
+      "destination": "/#visit",
+      "permanent": false
+    },
+    {
+      "source": "/reserve/",
+      "destination": "/#visit",
+      "permanent": false
+    },
+    {
+      "source": "/reservations",
+      "destination": "/#visit",
+      "permanent": false
+    },
+    {
+      "source": "/reservations/",
+      "destination": "/#visit",
+      "permanent": false
+    },
+    {
+      "source": "/booknow",
+      "destination": "/#visit",
+      "permanent": false
+    },
+    {
+      "source": "/booknow/",
+      "destination": "/#visit",
+      "permanent": false
+    },
+    {
+      "source": "/contact",
+      "destination": "/#visit",
+      "permanent": false
+    },
+    {
+      "source": "/contact/",
+      "destination": "/#visit",
+      "permanent": false
+    },
+    {
+      "source": "/menu",
+      "destination": "/#menu",
+      "permanent": false
+    },
+    {
+      "source": "/menu/",
+      "destination": "/#menu",
+      "permanent": false
+    },
+    {
+      "source": "/pricing",
+      "destination": "/#pricing",
+      "permanent": false
+    },
+    {
+      "source": "/pricing/",
+      "destination": "/#pricing",
+      "permanent": false
+    },
+    {
+      "source": "/about",
+      "destination": "/#rooms",
+      "permanent": false
+    },
+    {
+      "source": "/about/",
+      "destination": "/#rooms",
+      "permanent": false
+    },
+    {
+      "source": "/faq",
+      "destination": "/#faq",
+      "permanent": false
+    },
+    {
+      "source": "/faq/",
+      "destination": "/#faq",
+      "permanent": false
+    },
+    {
+      "source": "/terms-of-use",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/terms-of-use/",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/privacy-policy",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/privacy-policy/",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/.wp-toolkit_o",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/.wp-toolkit_o/",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/.wp-toolkit_o/reserve",
+      "destination": "/#visit",
+      "permanent": false
+    },
+    {
+      "source": "/.wp-toolkit_o/reserve/",
+      "destination": "/#visit",
+      "permanent": false
+    },
+    {
+      "source": "/.wp-toolkit_o/reservations",
+      "destination": "/#visit",
+      "permanent": false
+    },
+    {
+      "source": "/.wp-toolkit_o/reservations/",
+      "destination": "/#visit",
+      "permanent": false
+    },
+    {
+      "source": "/.wp-toolkit_o/contact",
+      "destination": "/#visit",
+      "permanent": false
+    },
+    {
+      "source": "/.wp-toolkit_o/contact/",
+      "destination": "/#visit",
+      "permanent": false
+    },
+    {
+      "source": "/.wp-toolkit_o/menu",
+      "destination": "/#menu",
+      "permanent": false
+    },
+    {
+      "source": "/.wp-toolkit_o/menu/",
+      "destination": "/#menu",
+      "permanent": false
+    },
+    {
+      "source": "/.wp-toolkit_o/pricing",
+      "destination": "/#pricing",
+      "permanent": false
+    },
+    {
+      "source": "/.wp-toolkit_o/pricing/",
+      "destination": "/#pricing",
+      "permanent": false
+    },
+    {
+      "source": "/.wp-toolkit_o/terms-of-use",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/.wp-toolkit_o/terms-of-use/",
+      "destination": "/",
+      "permanent": false
+    }
   ]
 }

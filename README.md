@@ -16,10 +16,11 @@ This is a public-surface backup, not a credentialed WordPress or hosting backup.
 
 Use this repo as a design and recovery reference for AI agents, developers, and human designers.
 
-## Deployable Emergency Site
+## Deployable Site
 
-- `index.html` - static emergency customer-facing fallback site.
-- `styles.css` - shared responsive venue-site styling.
+- `index.html` - deployable static homepage (retro POP design: hero collage, marquee, rooms, pricing, menu, visit, FAQ).
+- `design/POP_Karaoke_Home.dc.html` - original design-tool export the homepage was converted from.
+- `styles.css` - legacy styling from the earlier emergency fallback page (no longer referenced by `index.html`; kept for reference).
 - `assets/` - customer-facing media copied from the public website backup and WordPress media API.
 - `_verification/` - desktop and mobile screenshots generated during preview checks.
 

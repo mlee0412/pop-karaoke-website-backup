@@ -1,19 +1,14 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
   <title>POP Karaoke NYC | Retro Private Karaoke Rooms</title>
-  <meta name="description" content="Retro-themed private karaoke rooms, late-night singing, drinks, and group celebrations at POP Karaoke in Koreatown NYC.">
-  <meta name="theme-color" content="#FFF0F7">
-  <link rel="canonical" href="https://popkaraoke32.com/">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="POP Karaoke NYC | Retro Private Karaoke Rooms">
-  <meta property="og:description" content="Retro-themed private karaoke rooms, late-night singing, drinks, and group celebrations at POP Karaoke in Koreatown NYC.">
-  <meta property="og:url" content="https://popkaraoke32.com/">
-  <meta property="og:image" content="https://popkaraoke32.com/assets/header-desktop.png">
-  <link rel="icon" href="assets/header-logo.png">
-  <link rel="preload" as="image" href="assets/header-desktop.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css2?family=Shrikhand&amp;family=Pacifico&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
@@ -22,56 +17,33 @@
     body { margin: 0; background: #FFF0F7; color: #2B0F2E; font-family: "Space Grotesk", sans-serif; -webkit-font-smoothing: antialiased; }
     a { color: #E6007E; }
     a:hover { color: #7B2FBE; }
-    ::selection { background: #FFE23F; color: #2B0F2E; }
-    .skip-link { position: absolute; left: -999px; top: 0; z-index: 100; background: #2B0F2E; color: #FFFFFF; padding: 10px 18px; border-radius: 0 0 12px 0; }
-    .skip-link:focus { left: 0; color: #FFFFFF; }
-    .nav-link { text-decoration: none; color: #2B0F2E; }
-    .nav-link:hover { color: #E6007E; }
-    .btn { display: inline-flex; align-items: center; text-decoration: none; font-weight: 700; border: 3px solid #2B0F2E; border-radius: 999px; transition: transform 120ms ease, box-shadow 120ms ease; }
-    .btn-pink { background: #E6007E; color: #FFFFFF; }
-    .btn-pink:hover { color: #FFFFFF; }
-    .btn-white { background: #FFFFFF; color: #2B0F2E; }
-    .btn-white:hover { color: #E6007E; }
-    .btn-yellow { background: #FFE23F; color: #2B0F2E; box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.4); }
-    .btn-yellow:hover { transform: translate(-1px, -1px); color: #2B0F2E; }
-    .shadow-sm { box-shadow: 3px 3px 0 #2B0F2E; }
-    .shadow-sm:hover { transform: translate(-1px, -1px); box-shadow: 5px 5px 0 #2B0F2E; }
-    .shadow-lg { box-shadow: 5px 5px 0 #2B0F2E; }
-    .shadow-lg:hover { transform: translate(-2px, -2px); box-shadow: 7px 7px 0 #2B0F2E; }
-    .footer-link { color: #FF6EC0; text-decoration: none; }
-    .footer-link:hover { color: #FFE23F; }
-    .plain-link { color: #2B0F2E; text-decoration: none; }
-    .plain-link:hover { color: #E6007E; }
     @keyframes popMarquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-    .marquee-track { display: flex; width: max-content; animation: popMarquee 28s linear infinite; }
-    @media (prefers-reduced-motion: reduce) { .marquee-track { animation: none; } }
     details > summary { list-style: none; }
     details > summary::-webkit-details-marker { display: none; }
     details[open] .pop-plus { transform: rotate(45deg); }
+    ::selection { background: #FFE23F; color: #2B0F2E; }
   </style>
-</head>
-<body>
-<a class="skip-link" href="#top">Skip To Content</a>
+</helmet>
 
 <!-- ============ HEADER ============ -->
-<header style="position: sticky; top: 0; z-index: 50; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 12px clamp(16px, 4vw, 48px); background: rgba(255, 240, 247, 0.92); backdrop-filter: blur(14px); border-bottom: 3px solid #2B0F2E;">
+<header data-screen-label="Header" style="position: sticky; top: 0; z-index: 50; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 12px clamp(16px, 4vw, 48px); background: rgba(255, 240, 247, 0.92); backdrop-filter: blur(14px); border-bottom: 3px solid #2B0F2E;">
   <a href="#top" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
-    <img src="assets/header-logo.png" width="1796" height="948" alt="POP Karaoke logo" style="height: 44px; width: auto; display: block;">
+    <img src="assets/header-logo.png" alt="POP Karaoke logo" style="height: 44px; width: auto; display: block;">
   </a>
   <nav aria-label="Primary" style="display: flex; align-items: center; flex-wrap: wrap; gap: clamp(10px, 2vw, 26px); font-weight: 700; font-size: 15px;">
-    <a class="nav-link" href="#rooms">Rooms</a>
-    <a class="nav-link" href="#pricing">Pricing</a>
-    <a class="nav-link" href="#menu">Menu</a>
-    <a class="nav-link" href="#visit">Visit</a>
-    <a class="nav-link" href="#faq">FAQ</a>
-    <a class="btn btn-pink shadow-sm" href="https://book.squareup.com/appointments/2tokogvqdae7ck/location/L42ZB0SPGNW2R" target="_blank" rel="noopener" style="min-height: 42px; padding: 8px 20px;">Book a Room</a>
+    <a href="#rooms" style="text-decoration: none; color: #2B0F2E;" style-hover="color: #E6007E;">Rooms</a>
+    <a href="#pricing" style="text-decoration: none; color: #2B0F2E;" style-hover="color: #E6007E;">Pricing</a>
+    <a href="#menu" style="text-decoration: none; color: #2B0F2E;" style-hover="color: #E6007E;">Menu</a>
+    <a href="#visit" style="text-decoration: none; color: #2B0F2E;" style-hover="color: #E6007E;">Visit</a>
+    <a href="#faq" style="text-decoration: none; color: #2B0F2E;" style-hover="color: #E6007E;">FAQ</a>
+    <a href="https://book.squareup.com/appointments/2tokogvqdae7ck/location/L42ZB0SPGNW2R" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; min-height: 42px; padding: 8px 20px; background: #E6007E; color: #FFFFFF; text-decoration: none; font-weight: 700; border: 3px solid #2B0F2E; border-radius: 999px; box-shadow: 3px 3px 0 #2B0F2E; transition: transform 120ms ease, box-shadow 120ms ease;" style-hover="transform: translate(-1px, -1px); box-shadow: 5px 5px 0 #2B0F2E; color: #FFFFFF;">Book a Room</a>
   </nav>
 </header>
 
 <main id="top">
 
   <!-- ============ HERO ============ -->
-  <section style="position: relative; overflow: hidden; background: linear-gradient(180deg, #FFD6EC 0%, #FFF0F7 70%); padding: clamp(40px, 7vw, 88px) clamp(20px, 4vw, 48px) 0; text-align: center;">
+  <section data-screen-label="Hero" style="position: relative; overflow: hidden; background: linear-gradient(180deg, #FFD6EC 0%, #FFF0F7 70%); padding: clamp(40px, 7vw, 88px) clamp(20px, 4vw, 48px) 0; text-align: center;">
     <div style="position: relative; z-index: 1; max-width: 900px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 22px;">
       <span style="display: inline-flex; align-items: center; gap: 8px; transform: rotate(-2deg); background: #FFE23F; border: 3px solid #2B0F2E; border-radius: 999px; padding: 8px 18px; font-weight: 700; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; box-shadow: 3px 3px 0 #2B0F2E;">★ Floor 9 · Koreatown NYC · Open Late ★</span>
       <h1 style="margin: 0; font-family: Shrikhand, cursive; font-weight: 400; font-size: clamp(44px, 8vw, 96px); line-height: 1.02; letter-spacing: 0.01em;">
@@ -82,25 +54,27 @@
       </h1>
       <p style="margin: 0; max-width: 560px; font-size: clamp(17px, 2vw, 21px); line-height: 1.55; color: #5A3A5E;">Private retro karaoke rooms for birthdays, date nights, after-parties, and every "one more song" in between. Bring the group — we've got the mics.</p>
       <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; margin-top: 6px;">
-        <a class="btn btn-pink shadow-lg" href="https://book.squareup.com/appointments/2tokogvqdae7ck/location/L42ZB0SPGNW2R" target="_blank" rel="noopener" style="min-height: 52px; padding: 12px 28px; font-size: 17px;">Reserve Now</a>
-        <a class="btn btn-white shadow-lg" href="tel:+16463954777" style="min-height: 52px; padding: 12px 28px; font-size: 17px;">Call (646) 395-4777</a>
+        <a href="https://book.squareup.com/appointments/2tokogvqdae7ck/location/L42ZB0SPGNW2R" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; min-height: 52px; padding: 12px 28px; background: #E6007E; color: #FFFFFF; text-decoration: none; font-weight: 700; font-size: 17px; border: 3px solid #2B0F2E; border-radius: 999px; box-shadow: 5px 5px 0 #2B0F2E; transition: transform 120ms ease, box-shadow 120ms ease;" style-hover="transform: translate(-2px, -2px); box-shadow: 7px 7px 0 #2B0F2E; color: #FFFFFF;">Reserve Now</a>
+        <a href="tel:+16463954777" style="display: inline-flex; align-items: center; min-height: 52px; padding: 12px 28px; background: #FFFFFF; color: #2B0F2E; text-decoration: none; font-weight: 700; font-size: 17px; border: 3px solid #2B0F2E; border-radius: 999px; box-shadow: 5px 5px 0 #2B0F2E; transition: transform 120ms ease, box-shadow 120ms ease;" style-hover="transform: translate(-2px, -2px); box-shadow: 7px 7px 0 #2B0F2E; color: #E6007E;">Call (646) 395-4777</a>
       </div>
     </div>
     <div style="position: relative; margin: clamp(28px, 5vw, 56px) auto -4px; max-width: 1240px;">
-      <img src="assets/header-desktop.png" width="5760" height="3280" alt="Friends singing karaoke at POP Karaoke" style="display: block; width: 100%; height: auto;">
+      <img src="assets/hero.png" alt="Friends singing karaoke at POP Karaoke" style="display: block; width: 100%; height: auto;">
     </div>
   </section>
 
   <!-- ============ MARQUEE ============ -->
-  <div aria-hidden="true" style="overflow: hidden; background: #2B0F2E; border-top: 3px solid #2B0F2E; border-bottom: 3px solid #2B0F2E; padding: 12px 0;">
-    <div class="marquee-track">
-      <span style="white-space: nowrap; font-family: Shrikhand, cursive; font-size: 20px; letter-spacing: 0.06em; padding-right: 24px;"><span style="color: #FF6EC0;">PRIVATE ROOMS</span> <span style="color: #FFE23F;">★</span> <span style="color: #5FD9E4;">OPEN TIL 4:30 AM</span> <span style="color: #FFE23F;">★</span> <span style="color: #FFE23F;">100,000+ SONGS</span> <span style="color: #FF6EC0;">★</span> <span style="color: #C08BF5;">COCKTAILS &amp; BITES</span> <span style="color: #FFE23F;">★</span> <span style="color: #FF6EC0;">PRIVATE ROOMS</span> <span style="color: #FFE23F;">★</span> <span style="color: #5FD9E4;">OPEN TIL 4:30 AM</span> <span style="color: #FFE23F;">★</span> <span style="color: #FFE23F;">100,000+ SONGS</span> <span style="color: #FF6EC0;">★</span> <span style="color: #C08BF5;">COCKTAILS &amp; BITES</span> <span style="color: #FFE23F;">★</span>&nbsp;</span>
-      <span style="white-space: nowrap; font-family: Shrikhand, cursive; font-size: 20px; letter-spacing: 0.06em; padding-right: 24px;"><span style="color: #FF6EC0;">PRIVATE ROOMS</span> <span style="color: #FFE23F;">★</span> <span style="color: #5FD9E4;">OPEN TIL 4:30 AM</span> <span style="color: #FFE23F;">★</span> <span style="color: #FFE23F;">100,000+ SONGS</span> <span style="color: #FF6EC0;">★</span> <span style="color: #C08BF5;">COCKTAILS &amp; BITES</span> <span style="color: #FFE23F;">★</span> <span style="color: #FF6EC0;">PRIVATE ROOMS</span> <span style="color: #FFE23F;">★</span> <span style="color: #5FD9E4;">OPEN TIL 4:30 AM</span> <span style="color: #FFE23F;">★</span> <span style="color: #FFE23F;">100,000+ SONGS</span> <span style="color: #FF6EC0;">★</span> <span style="color: #C08BF5;">COCKTAILS &amp; BITES</span> <span style="color: #FFE23F;">★</span>&nbsp;</span>
+  <sc-if value="{{ showMarquee }}" hint-placeholder-val="{{ true }}">
+    <div data-screen-label="Marquee" aria-hidden="true" style="overflow: hidden; background: #2B0F2E; border-top: 3px solid #2B0F2E; border-bottom: 3px solid #2B0F2E; padding: 12px 0;">
+      <div style="display: flex; width: max-content; animation: popMarquee {{ marqueeDuration }} linear infinite;">
+        <span style="white-space: nowrap; font-family: Shrikhand, cursive; font-size: 20px; letter-spacing: 0.06em; padding-right: 24px;"><span style="color: #FF6EC0;">PRIVATE ROOMS</span> <span style="color: #FFE23F;">★</span> <span style="color: #5FD9E4;">OPEN TIL 4:30 AM</span> <span style="color: #FFE23F;">★</span> <span style="color: #FFE23F;">100,000+ SONGS</span> <span style="color: #FF6EC0;">★</span> <span style="color: #C08BF5;">COCKTAILS &amp; BITES</span> <span style="color: #FFE23F;">★</span> <span style="color: #FF6EC0;">PRIVATE ROOMS</span> <span style="color: #FFE23F;">★</span> <span style="color: #5FD9E4;">OPEN TIL 4:30 AM</span> <span style="color: #FFE23F;">★</span> <span style="color: #FFE23F;">100,000+ SONGS</span> <span style="color: #FF6EC0;">★</span> <span style="color: #C08BF5;">COCKTAILS &amp; BITES</span> <span style="color: #FFE23F;">★</span>&nbsp;</span>
+        <span style="white-space: nowrap; font-family: Shrikhand, cursive; font-size: 20px; letter-spacing: 0.06em; padding-right: 24px;"><span style="color: #FF6EC0;">PRIVATE ROOMS</span> <span style="color: #FFE23F;">★</span> <span style="color: #5FD9E4;">OPEN TIL 4:30 AM</span> <span style="color: #FFE23F;">★</span> <span style="color: #FFE23F;">100,000+ SONGS</span> <span style="color: #FF6EC0;">★</span> <span style="color: #C08BF5;">COCKTAILS &amp; BITES</span> <span style="color: #FFE23F;">★</span> <span style="color: #FF6EC0;">PRIVATE ROOMS</span> <span style="color: #FFE23F;">★</span> <span style="color: #5FD9E4;">OPEN TIL 4:30 AM</span> <span style="color: #FFE23F;">★</span> <span style="color: #FFE23F;">100,000+ SONGS</span> <span style="color: #FF6EC0;">★</span> <span style="color: #C08BF5;">COCKTAILS &amp; BITES</span> <span style="color: #FFE23F;">★</span>&nbsp;</span>
+      </div>
     </div>
-  </div>
+  </sc-if>
 
   <!-- ============ ROOMS / EXPERIENCE ============ -->
-  <section id="rooms" style="background: #FBF3E4; padding: clamp(56px, 8vw, 104px) clamp(20px, 4vw, 48px); scroll-margin-top: 90px;">
+  <section id="rooms" data-screen-label="Rooms" style="background: #FBF3E4; padding: clamp(56px, 8vw, 104px) clamp(20px, 4vw, 48px); scroll-margin-top: 90px;">
     <div style="max-width: 1120px; margin: 0 auto;">
       <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 14px; max-width: 720px;">
         <span style="display: inline-block; transform: rotate(-2deg); background: #5FD9E4; border: 3px solid #2B0F2E; border-radius: 999px; padding: 6px 16px; font-family: Pacifico, cursive; font-size: 17px; box-shadow: 3px 3px 0 #2B0F2E;">the experience</span>
@@ -128,8 +102,8 @@
   </section>
 
   <!-- ============ PRICING ============ -->
-  <section id="pricing" style="background: #2B0F2E; scroll-margin-top: 90px;">
-    <img src="assets/gallery-2.png" width="2560" height="1177" alt="Pricing" style="display: block; width: 100%; height: auto; background: #FFF0F7;">
+  <section id="pricing" data-screen-label="Pricing" style="background: #2B0F2E; scroll-margin-top: 90px;">
+    <img src="assets/banner-pricing.png" alt="Pricing" style="display: block; width: 100%; height: auto; background: #FFF0F7;">
     <div style="padding: clamp(20px, 4vw, 40px) clamp(20px, 4vw, 48px) clamp(56px, 8vw, 96px); margin-top: -2px;">
       <div style="max-width: 1120px; margin: 0 auto;">
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr)); gap: 22px;">
@@ -178,15 +152,15 @@
         </div>
         <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; margin-top: 34px; background: #3A1741; border: 3px dashed #FF6EC0; border-radius: 18px; padding: 20px 24px; color: #FFE9F5;">
           <p style="margin: 0; font-size: 15px; line-height: 1.55; max-width: 640px;"><strong style="color: #FFE23F;">Hosting a bigger event?</strong> Open-bar event packages run $40–$89 per person — Main Character Night, BYOB, signature open bar, and full catering menus. Tax &amp; gratuity not included.</p>
-          <a class="btn btn-yellow" href="mailto:hello@popkaraoke32.com" style="min-height: 46px; padding: 10px 22px;">Plan an Event</a>
+          <a href="/cdn-cgi/l/email-protection#4e262b2222210e3e213e252f3c2f21252b7d7c602d2123" style="display: inline-flex; align-items: center; min-height: 46px; padding: 10px 22px; background: #FFE23F; color: #2B0F2E; text-decoration: none; font-weight: 700; border: 3px solid #2B0F2E; border-radius: 999px; box-shadow: 4px 4px 0 rgba(0,0,0,0.4); transition: transform 120ms ease;" style-hover="transform: translate(-1px, -1px); color: #2B0F2E;">Plan an Event</a>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ============ MENU ============ -->
-  <section id="menu" style="background: #FFF0F7; scroll-margin-top: 90px;">
-    <img src="assets/gallery-3.png" width="2560" height="1120" alt="Menu" style="display: block; width: 100%; height: auto; background: #2B0F2E;">
+  <section id="menu" data-screen-label="Menu" style="background: #FFF0F7; scroll-margin-top: 90px;">
+    <img src="assets/banner-menu.png" alt="Menu" style="display: block; width: 100%; height: auto; background: #2B0F2E;">
     <div style="padding: clamp(16px, 3vw, 32px) clamp(20px, 4vw, 48px) clamp(56px, 8vw, 96px);">
       <div style="max-width: 900px; margin: 0 auto; display: grid; gap: 16px;">
         <details open style="background: #FFFFFF; border: 3px solid #2B0F2E; border-radius: 20px; box-shadow: 5px 5px 0 #E6007E; overflow: hidden;">
@@ -228,23 +202,20 @@
             <p style="margin: 0; padding: 16px 24px; background: #FFFFFF;"><strong style="color: #D98200;">Catering Entrées &amp; Dessert</strong><br><span style="color: #5A3A5E; font-size: 15px; line-height: 1.6;">Roasted Chicken Pinwheels 170 · Penne Arrabbiata 180 · Chicken Taco 200 · Chicken Alfredo 200 · Bulgogi Fried Rice 230 · Fruit Medley 200 · Macaron Tower 120 · All Star Platter 230</span></p>
           </div>
         </details>
-        <p style="margin: 10px 0 0; text-align: center;">
-          <a class="btn btn-white shadow-sm" href="assets/menus/pop-menu-2026-05-21.pdf" target="_blank" rel="noopener" style="min-height: 46px; padding: 10px 22px;">Printable Menu (PDF)</a>
-        </p>
       </div>
     </div>
   </section>
 
   <!-- ============ VISIT / RESERVE ============ -->
-  <section id="visit" style="background: #FFE23F; border-top: 3px solid #2B0F2E; border-bottom: 3px solid #2B0F2E; padding: clamp(56px, 8vw, 104px) clamp(20px, 4vw, 48px); scroll-margin-top: 90px;">
+  <section id="visit" data-screen-label="Visit" style="background: #FFE23F; border-top: 3px solid #2B0F2E; border-bottom: 3px solid #2B0F2E; padding: clamp(56px, 8vw, 104px) clamp(20px, 4vw, 48px); scroll-margin-top: 90px;">
     <div style="max-width: 1120px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); gap: clamp(28px, 5vw, 64px); align-items: center;">
       <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 14px;">
         <span style="display: inline-block; transform: rotate(-2deg); background: #FFFFFF; border: 3px solid #2B0F2E; border-radius: 999px; padding: 6px 16px; font-family: Pacifico, cursive; font-size: 17px; box-shadow: 3px 3px 0 #2B0F2E;">come thru</span>
         <h2 style="margin: 0; font-family: Shrikhand, cursive; font-weight: 400; font-size: clamp(32px, 5vw, 56px); line-height: 1.05; color: #2B0F2E; text-wrap: balance;">Floor 9. Koreatown. Late late late.</h2>
         <p style="margin: 0; font-size: clamp(16px, 2vw, 19px); line-height: 1.6; color: #5A4310;">Book a room online in seconds, or call and email for group packages and private events. Elevator to 9 — follow the music.</p>
         <div style="display: flex; flex-wrap: wrap; gap: 14px; margin-top: 8px;">
-          <a class="btn btn-pink shadow-lg" href="https://book.squareup.com/appointments/2tokogvqdae7ck/location/L42ZB0SPGNW2R" target="_blank" rel="noopener" style="min-height: 52px; padding: 12px 28px; font-size: 17px;">Reserve Now</a>
-          <a class="btn btn-white shadow-lg" href="mailto:hello@popkaraoke32.com" style="min-height: 52px; padding: 12px 28px; font-size: 17px;">Email Us</a>
+          <a href="https://book.squareup.com/appointments/2tokogvqdae7ck/location/L42ZB0SPGNW2R" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; min-height: 52px; padding: 12px 28px; background: #E6007E; color: #FFFFFF; text-decoration: none; font-weight: 700; font-size: 17px; border: 3px solid #2B0F2E; border-radius: 999px; box-shadow: 5px 5px 0 #2B0F2E; transition: transform 120ms ease, box-shadow 120ms ease;" style-hover="transform: translate(-2px, -2px); box-shadow: 7px 7px 0 #2B0F2E; color: #FFFFFF;">Reserve Now</a>
+          <a href="/cdn-cgi/l/email-protection#e68e838a8a89a69689968d879487898d83d5d4c885898b" style="display: inline-flex; align-items: center; min-height: 52px; padding: 12px 28px; background: #FFFFFF; color: #2B0F2E; text-decoration: none; font-weight: 700; font-size: 17px; border: 3px solid #2B0F2E; border-radius: 999px; box-shadow: 5px 5px 0 #2B0F2E; transition: transform 120ms ease, box-shadow 120ms ease;" style-hover="transform: translate(-2px, -2px); box-shadow: 7px 7px 0 #2B0F2E; color: #E6007E;">Email Us</a>
         </div>
       </div>
       <div style="background: #FFFFFF; border: 3px solid #2B0F2E; border-radius: 22px; box-shadow: 8px 8px 0 #2B0F2E; padding: 30px; transform: rotate(1deg);">
@@ -259,11 +230,11 @@
           </div>
           <div style="display: grid; gap: 4px; border-bottom: 2px dashed #E8C7DA; padding-bottom: 16px;">
             <dt style="font-weight: 700; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: #E6007E;">Phone</dt>
-            <dd style="margin: 0; font-weight: 600; font-size: 17px;"><a class="plain-link" href="tel:+16463954777">+1 (646) 395-4777</a></dd>
+            <dd style="margin: 0; font-weight: 600; font-size: 17px;"><a href="tel:+16463954777" style="color: #2B0F2E; text-decoration: none;" style-hover="color: #E6007E;">+1 (646) 395-4777</a></dd>
           </div>
           <div style="display: grid; gap: 4px;">
             <dt style="font-weight: 700; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: #E6007E;">Email</dt>
-            <dd style="margin: 0; font-weight: 600; font-size: 17px;"><a class="plain-link" href="mailto:hello@popkaraoke32.com">hello@popkaraoke32.com</a></dd>
+            <dd style="margin: 0; font-weight: 600; font-size: 17px;"><a href="/cdn-cgi/l/email-protection#cea6aba2a2a18ebea1bea5afbcafa1a5abfdfce0ada1a3" style="color: #2B0F2E; text-decoration: none;" style-hover="color: #E6007E;"><span class="__cf_email__" data-cfemail="2048454c4c4f60504f504b4152414f4b4513120e434f4d">[email&#160;protected]</span></a></dd>
           </div>
         </dl>
       </div>
@@ -271,7 +242,7 @@
   </section>
 
   <!-- ============ FAQ ============ -->
-  <section id="faq" style="background: #FFF0F7; padding: clamp(56px, 8vw, 104px) clamp(20px, 4vw, 48px); scroll-margin-top: 90px;">
+  <section id="faq" data-screen-label="FAQ" style="background: #FFF0F7; padding: clamp(56px, 8vw, 104px) clamp(20px, 4vw, 48px); scroll-margin-top: 90px;">
     <div style="max-width: 900px; margin: 0 auto;">
       <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 14px;">
         <span style="display: inline-block; transform: rotate(-2deg); background: #FF6EC0; border: 3px solid #2B0F2E; border-radius: 999px; padding: 6px 16px; font-family: Pacifico, cursive; font-size: 17px; color: #2B0F2E; box-shadow: 3px 3px 0 #2B0F2E;">good to know</span>
@@ -297,17 +268,28 @@
 </main>
 
 <!-- ============ FOOTER ============ -->
-<footer style="background: #2B0F2E; color: #E8C7DA; padding: 40px clamp(20px, 4vw, 48px) 48px;">
+<footer data-screen-label="Footer" style="background: #2B0F2E; color: #E8C7DA; padding: 40px clamp(20px, 4vw, 48px) 48px;">
   <div style="max-width: 1120px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px;">
-    <img src="assets/header-logo.png" width="1796" height="948" alt="POP Karaoke" style="height: 52px; width: auto;">
+    <img src="assets/header-logo.png" alt="POP Karaoke" style="height: 52px; width: auto;">
     <div style="display: flex; flex-wrap: wrap; gap: 20px; font-weight: 600; font-size: 15px;">
-      <a class="footer-link" href="https://www.instagram.com/popkaraokenyc/" target="_blank" rel="noopener">Instagram</a>
-      <a class="footer-link" href="assets/menus/pop-menu-2026-05-21.pdf" target="_blank" rel="noopener">Menu (PDF)</a>
-      <a class="footer-link" href="tel:+16463954777">+1 (646) 395-4777</a>
-      <a class="footer-link" href="mailto:hello@popkaraoke32.com">hello@popkaraoke32.com</a>
+      <a href="https://www.instagram.com/popkaraokenyc/" target="_blank" rel="noopener" style="color: #FF6EC0; text-decoration: none;" style-hover="color: #FFE23F;">Instagram</a>
+      <a href="tel:+16463954777" style="color: #FF6EC0; text-decoration: none;" style-hover="color: #FFE23F;">+1 (646) 395-4777</a>
+      <a href="/cdn-cgi/l/email-protection#94fcf1f8f8fbd4e4fbe4fff5e6f5fbfff1a7a6baf7fbf9" style="color: #FF6EC0; text-decoration: none;" style-hover="color: #FFE23F;"><span class="__cf_email__" data-cfemail="87efe2ebebe8c7f7e8f7ece6f5e6e8ece2b4b5a9e4e8ea">[email&#160;protected]</span></a>
     </div>
     <span style="font-size: 14px; color: #B98BA8;">POP Karaoke · popkaraoke32.com</span>
   </div>
 </footer>
+</x-dc>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/x-dc" data-dc-script data-props="{&quot;showMarquee&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Marquee&quot;},&quot;marqueeSpeed&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:28,&quot;min&quot;:8,&quot;max&quot;:60,&quot;step&quot;:1,&quot;unit&quot;:&quot;s&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Marquee&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    const speed = this.props.marqueeSpeed ?? 28;
+    return {
+      showMarquee: this.props.showMarquee ?? true,
+      marqueeDuration: speed + "s",
+    };
+  }
+}
+</script>
 </body>
 </html>
