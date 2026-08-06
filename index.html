@@ -13,7 +13,6 @@
   <meta property="og:url" content="https://popkaraoke32.com/">
   <meta property="og:image" content="https://popkaraoke32.com/assets/header-desktop.png">
   <link rel="icon" href="assets/header-logo.png">
-  <link rel="preload" as="image" href="assets/header-desktop.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css2?family=Shrikhand&amp;family=Pacifico&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
@@ -48,6 +47,31 @@
     details > summary { list-style: none; }
     details > summary::-webkit-details-marker { display: none; }
     details[open] .pop-plus { transform: rotate(45deg); }
+    :focus-visible { outline: 4px solid #FFE23F; outline-offset: 3px; }
+    #menu { position: relative; }
+    #menu > div { max-width: 1040px !important; }
+    #menu details { scroll-margin-top: 96px; transition: box-shadow 160ms ease, transform 160ms ease; }
+    #menu details:hover { transform: translate(-1px, -1px); box-shadow: 7px 7px 0 currentColor; }
+    #menu details > summary { min-height: 68px; }
+    #menu details > div { grid-template-columns: 1fr !important; gap: 1px !important; }
+    #menu details > div > p { display: grid; gap: 7px; padding: 18px 24px !important; }
+    #menu details:first-of-type > div > p { border-left: 5px solid #E6007E; }
+    .menu-subsection { display: grid; gap: 0; padding: 0 !important; }
+    .menu-subsection > strong { display: block; padding: 18px 24px 12px; border-left: 5px solid currentColor; font-size: 16px; letter-spacing: .02em; }
+    .menu-line-list { list-style: none; margin: 0; padding: 0 24px 18px; display: grid; }
+    .menu-line-list li { display: flex; justify-content: space-between; gap: 16px; padding: 11px 0; border-top: 1px solid #E8C7DA; color: #5A3A5E; font-size: 15px; line-height: 1.45; }
+    .menu-line-list li::before { content: "✦"; flex: 0 0 auto; color: #E6007E; font-size: 11px; padding-top: 4px; }
+    .menu-line-list li span { flex: 1; }
+    .menu-kicker { display: inline-flex; align-items: center; gap: 8px; margin: 0 0 14px; padding: 7px 13px; border: 2px solid #2B0F2E; border-radius: 999px; background: #FFE23F; font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+    @media (max-width: 720px) {
+      header { align-items: flex-start !important; padding: 10px 14px !important; }
+      header nav { justify-content: flex-end; gap: 8px 13px !important; font-size: 13px !important; }
+      header nav .btn { min-height: 36px !important; padding: 6px 12px !important; }
+      #menu details > summary { padding: 15px 17px !important; font-size: 20px !important; }
+      #menu details > div > p, .menu-subsection > strong { padding-left: 17px !important; padding-right: 17px !important; }
+      .menu-line-list { padding-left: 17px; padding-right: 17px; }
+      .menu-line-list li { gap: 10px; padding: 10px 0; }
+    }
   </style>
 </head>
 <body>
@@ -189,6 +213,10 @@
     <img src="assets/gallery-3.png" width="2560" height="1120" alt="Menu" style="display: block; width: 100%; height: auto; background: #2B0F2E;">
     <div style="padding: clamp(16px, 3vw, 32px) clamp(20px, 4vw, 48px) clamp(56px, 8vw, 96px);">
       <div style="max-width: 900px; margin: 0 auto; display: grid; gap: 16px;">
+        <div style="text-align: center; padding: 8px 0 12px;">
+          <span class="menu-kicker">POP food &amp; drinks · every item, one line</span>
+          <p style="margin: 0; color: #5A3A5E; line-height: 1.5;">Open a category to browse the full menu without hunting through crowded paragraphs.</p>
+        </div>
         <details open style="background: #FFFFFF; border: 3px solid #2B0F2E; border-radius: 20px; box-shadow: 5px 5px 0 #E6007E; overflow: hidden;">
           <summary style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 18px 24px; cursor: pointer; font-family: Shrikhand, cursive; font-size: 22px; color: #E6007E;">Signature Cocktails <span class="pop-plus" style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 26px; color: #2B0F2E; transition: transform 150ms ease;">+</span></summary>
           <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 2px; background: #F5D9E8; border-top: 3px solid #2B0F2E;">
@@ -295,6 +323,34 @@
   </section>
 
 </main>
+
+<script>
+  // Turn the compact source menu strings into individual, accessible menu rows.
+  // Source copy stays in the document so current item names and prices are preserved.
+  document.querySelectorAll('#menu details:not(:first-of-type) > div > p').forEach((group) => {
+    const heading = group.querySelector('strong');
+    const items = group.querySelector('span');
+    if (!heading || !items) return;
+
+    const title = heading.textContent.trim();
+    const lines = items.textContent.split(' · ').map((line) => line.trim()).filter(Boolean);
+    const wrapper = document.createElement('div');
+    wrapper.className = 'menu-subsection';
+    const label = document.createElement('strong');
+    label.textContent = title;
+    const list = document.createElement('ul');
+    list.className = 'menu-line-list';
+    lines.forEach((line) => {
+      const row = document.createElement('li');
+      const text = document.createElement('span');
+      text.textContent = line;
+      row.appendChild(text);
+      list.appendChild(row);
+    });
+    wrapper.append(label, list);
+    group.replaceWith(wrapper);
+  });
+</script>
 
 <!-- ============ FOOTER ============ -->
 <footer style="background: #2B0F2E; color: #E8C7DA; padding: 40px clamp(20px, 4vw, 48px) 48px;">
