@@ -72,6 +72,21 @@
       .menu-line-list { padding-left: 17px; padding-right: 17px; }
       .menu-line-list li { gap: 10px; padding: 10px 0; }
     }
+    .catering-note { margin: 0; padding: 20px 24px; background: #FFF8D9; color: #2B0F2E; line-height: 1.6; }
+    .catering-note strong { display: block; }
+    .catering-category { padding: 20px 24px 0; background: #FFFFFF; }
+    .catering-category h3 { margin: 0 0 10px; font-family: Shrikhand, cursive; font-size: 21px; font-weight: 400; color: #7B2FBE; }
+    .catering-list { list-style: none; margin: 0; padding: 0; }
+    .catering-list li { padding: 16px 0; border-top: 1px solid #E8C7DA; }
+    .catering-item { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; font-size: 16px; line-height: 1.5; }
+    .catering-price { flex-shrink: 0; color: #B80065; font-weight: 700; }
+    .catering-list p { margin: 5px 0 0; color: #5A3A5E; font-size: 15px; line-height: 1.6; }
+    .menu-downloads { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; margin: 10px 0 0; }
+    .menu-downloads .btn { min-height: 46px; padding: 10px 22px; text-align: center; justify-content: center; }
+    @media (max-width: 720px) {
+      .catering-note, .catering-category { padding-left: 17px; padding-right: 17px; }
+      .catering-item { gap: 12px; }
+    }
   </style>
 </head>
 <body>
@@ -216,6 +231,7 @@
         <div style="text-align: center; padding: 8px 0 12px;">
           <span class="menu-kicker">POP food &amp; drinks · every item, one line</span>
           <p style="margin: 0; color: #5A3A5E; line-height: 1.5;">Open a category to browse the full menu without hunting through crowded paragraphs.</p>
+          <a href="#catering" style="display: inline-block; margin-top: 14px; padding: 8px 0; font-weight: 700;">Explore catering platters ↓</a>
         </div>
         <details open style="background: #FFFFFF; border: 3px solid #2B0F2E; border-radius: 20px; box-shadow: 5px 5px 0 #E6007E; overflow: hidden;">
           <summary style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 18px 24px; cursor: pointer; font-family: Shrikhand, cursive; font-size: 22px; color: #E6007E;">Signature Cocktails <span class="pop-plus" style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 26px; color: #2B0F2E; transition: transform 150ms ease;">+</span></summary>
@@ -256,9 +272,43 @@
             <p style="margin: 0; padding: 16px 24px; background: #FFFFFF;"><strong style="color: #D98200;">Event Packages (per person)</strong><br><span style="color: #5A3A5E; font-size: 15px; line-height: 1.6;">Main Character Night 40 (minors only) · After Party Wine &amp; Beer 59 · Bring the Drama BYOB 65 · House Rules Open Bar 69 · It Girl Signature Bar 79 · Final Cut Reserve 89. Minimum 10 guests; extensions available.</span></p>
           </div>
         </details>
-        <p style="margin: 10px 0 0; text-align: center;">
-          <a class="btn btn-white shadow-sm" href="assets/menus/pop-menu-2026-07-24.pdf" target="_blank" rel="noopener" style="min-height: 46px; padding: 10px 22px;">Printable Menu (PDF)</a>
-        </p>
+        <details id="catering" open style="background: #FFFFFF; border: 3px solid #2B0F2E; border-radius: 20px; box-shadow: 5px 5px 0 #E6007E; overflow: hidden;">
+          <summary style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 18px 24px; cursor: pointer; font-family: Shrikhand, cursive; font-size: 22px; color: #E6007E;">Catering Platters <span class="pop-plus" aria-hidden="true" style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 26px; color: #2B0F2E; transition: transform 150ms ease;">+</span></summary>
+          <div style="border-top: 3px solid #2B0F2E;">
+            <div class="catering-note"><strong>Each platter serves approximately 10 guests.</strong>Please let us know if a guest has any food allergies or special dietary needs.</div>
+            <section class="catering-category" aria-labelledby="catering-starters">
+              <h3 id="catering-starters">Starters</h3>
+              <ul class="catering-list">
+                <li><div class="catering-item"><strong>Golden French Fries</strong><span class="catering-price">$140</span></div><p>Double-fried, battered with breadcrumbs, seasoned with herbs + spices</p></li>
+                <li><div class="catering-item"><strong>Caprese Salad</strong><span class="catering-price">$160</span></div><p>Fresh mozzarella, sliced tomato, sweet basil, balsamic pesto, olive oil</p></li>
+                <li><div class="catering-item"><strong>Mozzarella Cheese Sticks</strong><span class="catering-price">$180</span></div><p>Warm, gooey cheese encased in garlic + oregano breadcrumb shells</p></li>
+                <li><div class="catering-item"><strong>Fish Sticks</strong><span class="catering-price">$180</span></div><p>Wild-caught Pacific Pollock, panko breadcrumbs, lemon-herb tartar sauce, and fresh lemon.</p></li>
+                <li><div class="catering-item"><strong>Cocktail Shrimp</strong><span class="catering-price">$200</span></div><p>Peeled + chilled oceanics with zesty cocktail sauce + lemon wedges</p></li>
+                <li><div class="catering-item"><strong>Crispy Dumplings</strong><span class="catering-price">$200</span></div><p>Choice of flavor: Classic • Soy Garlic • Sweet &amp; Spicy</p></li>
+              </ul>
+            </section>
+            <section class="catering-category" aria-labelledby="catering-entrees">
+              <h3 id="catering-entrees">Entrees</h3>
+              <ul class="catering-list">
+                <li><div class="catering-item"><strong>Roasted Chicken Pinwheels</strong><span class="catering-price">$170</span></div><p>Lahvash flatbread, Swiss cheese, lettuce, tomato, cranberry dressing</p></li>
+                <li><div class="catering-item"><strong>Pasta Salad</strong><span class="catering-price">$200</span></div><p>Rotini pasta, fresh microgreens, cherry tomatoes, sliced black olives, and shredded Parmesan cheese.</p></li>
+                <li><div class="catering-item"><strong>Chicken Wings</strong><span class="catering-price">$200</span></div><p>Choice of flavor: Plain • Buffalo • BBQ</p></li>
+                <li><div class="catering-item"><strong>Grilled Chicken Tacos</strong><span class="catering-price">$200</span></div><p>Corn flour, shredded veggies, cheese, cilantro, tomato salsa, lime</p></li>
+              </ul>
+            </section>
+            <section class="catering-category" aria-labelledby="catering-dessert">
+              <h3 id="catering-dessert">Dessert</h3>
+              <ul class="catering-list">
+                <li><div class="catering-item"><strong>Fruit Medley</strong><span class="catering-price">$200</span></div><p>Pineapples • Watermelon • Honeydew • Strawberries • Apples • Oranges • Green Grapes • Cherry Tomatoes • (Medley has seasonal variations)</p></li>
+                <li><div class="catering-item"><strong>Macaron Tower</strong><span class="catering-price">$100</span></div><p>Thirty-six (36) delicate, colorful 3-tier confection tower with luscious fillings sandwiched between delicate meringue shells</p></li>
+              </ul>
+            </section>
+          </div>
+        </details>
+        <div class="menu-downloads">
+          <a class="btn btn-white shadow-sm" href="assets/menus/pop-menu-2026-07-24.pdf" target="_blank" rel="noopener">Printable Menu (PDF)</a>
+          <a class="btn btn-yellow shadow-sm" href="assets/menus/pop-catering-menu-2026-09-15.pdf" target="_blank" rel="noopener">Catering Menu (PDF)</a>
+        </div>
       </div>
     </div>
   </section>
@@ -359,6 +409,7 @@
     <div style="display: flex; flex-wrap: wrap; gap: 20px; font-weight: 600; font-size: 15px;">
       <a class="footer-link" href="https://www.instagram.com/popkaraokenyc/" target="_blank" rel="noopener">Instagram</a>
       <a class="footer-link" href="assets/menus/pop-menu-2026-07-24.pdf" target="_blank" rel="noopener">Menu (PDF)</a>
+      <a class="footer-link" href="assets/menus/pop-catering-menu-2026-09-15.pdf" target="_blank" rel="noopener">Catering Menu (PDF)</a>
       <a class="footer-link" href="tel:+16463954777">+1 (646) 395-4777</a>
       <a class="footer-link" href="mailto:hello@popkaraoke32.com">hello@popkaraoke32.com</a>
     </div>

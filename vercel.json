@@ -51,6 +51,16 @@
       "permanent": false
     },
     {
+      "source": "/catering",
+      "destination": "/#catering",
+      "permanent": false
+    },
+    {
+      "source": "/catering/",
+      "destination": "/#catering",
+      "permanent": false
+    },
+    {
       "source": "/pricing",
       "destination": "/#pricing",
       "permanent": false
